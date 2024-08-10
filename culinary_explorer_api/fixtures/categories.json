@@ -2,11 +2,25 @@
     {
         "model": "culinary_explorer_api.categories",
         "fields": {
-            "first_name": "Gedeon",
-            "last_name": "Kokoroko",
-            "email_address": "gedeon.ram.dev@gmail.com",
-            "profile_image_url": "https://lh3.googleusercontent.com/a-/AOh14Gj",
-            "uid": "T4r4GagFtNhgC87I8bDcr78WUtZ2"
+            "category": "Order In"
+        }
+    },     
+    {
+        "model": "culinary_explorer_api.categories",
+        "fields": {
+            "category": "Take Out"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.categories",
+        "fields": {
+            "category": "Dine In"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.categories",
+        "fields": {
+            "category": "Home Made"
         }
     }
   ]
