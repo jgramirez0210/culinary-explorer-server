@@ -1,7 +1,7 @@
 {
   "python.linting.pylintArgs": [
       "--load-plugins=pylint_django",
-      "--django-settings-module=levelup.settings",
+      "--django-settings-module=culinary_explorer.settings",
   ],
   "AllAutocomplete.showCurrentDocument": false,
   "cSpell.ignoreWords": [

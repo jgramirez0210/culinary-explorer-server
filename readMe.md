@@ -1,12 +1,7 @@
 # LEVEL UP: YOUR ULTIMATE GAMING PLATFORM
-Level Up is the premier destination for gamers looking to unleash their creativity and connect with like-minded enthusiasts. Our platform empowers you to create new games, organize events, and join a vibrant community of gamers from around the world.
+
 
 # FEATURES
-- Game Creation and Management: Gamers can create games, specifying the game type from a predefined list. They can update or delete their games, reflecting the one-to-many relationship between Gamer and Game.
-
-- Event Creation and Management: Gamers can organize events for games, indicating their role as the organizer. This feature leverages the one-to-many relationship between Gamer (as organizers) and Event.
-
-- Event Participation: Gamers can sign up for events, showcasing the many-to-many relationship between Gamer and Event through the EventGamer join table. This feature would include the ability to join or leave an event.
 
 
 # PROJECT SETUP INSTRUCTIONS FOR FIRST TIME INSTALLATION

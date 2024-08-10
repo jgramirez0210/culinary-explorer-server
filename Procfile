@@ -1,1 +1,1 @@
-web: gunicorn levelup.wsgi --log-file -
+web: gunicorn culinary_explorer.wsgi --log-file -
