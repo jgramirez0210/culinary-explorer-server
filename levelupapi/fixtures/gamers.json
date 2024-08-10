@@ -1,0 +1,10 @@
+[
+  {
+      "model": "levelupapi.gamer",
+      "pk": 1,
+      "fields": {
+          "uid": "T4r4GagFtNhgC87I8bDcr78WUtZ2",
+          "bio": "Gedeon.dev"
+      }
+  }
+]

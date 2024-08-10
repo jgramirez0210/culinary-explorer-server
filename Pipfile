@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+autopep8 = "==2.0.0"
+pylint = "==2.15.5"
+djangorestframework = "==3.14.0"
+django-cors-headers = "==3.13.0"
+pylint-django = "==2.5.3"
+python-dotenv = "*"
+gunicorn = "*"
+django-on-heroku = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

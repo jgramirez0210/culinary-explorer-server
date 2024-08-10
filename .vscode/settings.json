@@ -1,0 +1,10 @@
+{
+  "python.linting.pylintArgs": [
+      "--load-plugins=pylint_django",
+      "--django-settings-module=levelup.settings",
+  ],
+  "AllAutocomplete.showCurrentDocument": false,
+  "cSpell.ignoreWords": [
+    "Pipenv"
+  ],
+}
