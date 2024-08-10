@@ -1,0 +1,13 @@
+[
+    {
+        "model": "culinary_explorer_api.categories",
+        "fields": {
+            "first_name": "Gedeon",
+            "last_name": "Kokoroko",
+            "email_address": "gedeon.ram.dev@gmail.com",
+            "profile_image_url": "https://lh3.googleusercontent.com/a-/AOh14Gj",
+            "uid": "T4r4GagFtNhgC87I8bDcr78WUtZ2"
+        }
+    }
+  ]
+  
