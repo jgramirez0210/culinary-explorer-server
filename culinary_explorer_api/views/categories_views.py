@@ -46,3 +46,12 @@ class CategoriesView(ViewSet):
         new_category.save()
         serializer = CategoriesSerializer(new_category)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+    def destroy(self, request, pk):
+        try:
+            category = Categories.objects.get(pk=pk)
+            category.delete()
+            
+            return Response('The Category was deleted', status=status.HTTP_204_NO_CONTENT)
+        except Categories.DoesNotExist as ex:
+            return Response({'message': 'No category found to delete'}, status=status.HTTP_404_NOT_FOUND)
