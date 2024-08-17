@@ -1,0 +1,23 @@
+[
+    {
+        "model": "culinary_explorer_api.dish",
+        "fields": {
+            "dish_name": "Pizza",
+            "description": "A delicious pizza with pepperoni, sausage, and pinaepple",
+            "notes": "Extra cheese",
+            "food_image_url": "https://shorturl.at/cKyvE",
+            "price": 12.99
+        }
+    },     
+    {
+        "model": "culinary_explorer_api.dish",
+        "fields": {
+            "dish_name": "Pad Thai",
+            "description": "Chicken pad thai wiht no onions",
+            "notes": "No onions",
+            "food_image_url": "https://shorturl.at/X93jD",
+            "price": 12.99
+        }
+    }
+  ]
+  

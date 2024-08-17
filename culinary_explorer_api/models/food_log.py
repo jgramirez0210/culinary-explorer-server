@@ -1,12 +1,9 @@
 from django.db import models
-from .food_log import food_log
+from .categories import Categories
 
 
 class Food_Log(models.Model):
-
-    restaurant_id = models.CharField(max_length=100)
-    dish_id = models.CharField(max_length=100)
-    price = models.CharField(max_length=100)
-    category = models.CharField(max_length=100)
-    food_image = models.CharField(max_length=100)
-    uid = models.CharField(max_length=100)
+    restaurant = models.ForeignKey('Restaurants', on_delete=models.CASCADE)
+    dish = models.ForeignKey('Dish', on_delete=models.CASCADE)
+    category = models.ManyToManyField(Categories)
+    uid = models.CharField(max_length=50)
