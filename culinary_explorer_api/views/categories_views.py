@@ -25,3 +25,16 @@ class CategoriesView(ViewSet):
             return Response({'message': 'Category not found.'}, status=status.HTTP_404_NOT_FOUND)
         serializer = CategoriesSerializer(category)
         return Response(serializer.data)
+    
+    def list(self, request):
+        """Handel GET requests to get all categories
+        
+        Returns:
+            Response -- JSON serialized list of categories
+        """
+        
+        category = Categories.objects.all()
+        if not category.exists():
+            return Response({'message': 'Categories not found.'}, status=status.HTTP_404_NOT_FOUND)
+        serializer = CategoriesSerializer(category, many=True)
+        return Response(serializer.data)
