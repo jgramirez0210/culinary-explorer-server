@@ -1,0 +1,21 @@
+[
+    {
+        "model": "culinary_explorer_api.food_log",
+        "fields": {
+            "restaurant_id": "1",
+            "dish_id": "1",
+            "category": "2",
+            "uid": "T4r4GagFtNhgC87I8bDcr78WUtZ2"
+        }
+    },     
+    {
+        "model": "culinary_explorer_api.food_log",
+        "fields": {
+            "restaurant_id": "2",
+            "dish_id": "2",
+            "category": [1,2],
+            "uid": "T4r4GagFtNhgC87I8bDcr78WUtZ2"
+        }
+    }
+  ]
+  
