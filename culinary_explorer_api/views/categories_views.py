@@ -38,3 +38,11 @@ class CategoriesView(ViewSet):
             return Response({'message': 'Categories not found.'}, status=status.HTTP_404_NOT_FOUND)
         serializer = CategoriesSerializer(category, many=True)
         return Response(serializer.data)
+    
+    def create(self, request):
+        """Handle Create Requests for categories"""
+        new_category = Categories()
+        new_category.category = request.data["category"]
+        new_category.save()
+        serializer = CategoriesSerializer(new_category)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
