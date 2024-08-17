@@ -6,7 +6,7 @@ from culinary_explorer_api.models import User
 class UserTests(TestCase):
     def setUp(self):
         """Data set up for the tests"""
-        self.client = APIClient()
+        self.client = User.objects.first()
 
     def test_register_user(self):
         """Test user registration"""
