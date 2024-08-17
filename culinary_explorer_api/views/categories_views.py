@@ -9,7 +9,6 @@ class CategoriesSerializer(serializers.ModelSerializer):
         model = Categories
         fields = ['id', 'category']
 
-
 class CategoriesView(ViewSet):
     """Culinary Explorer Categories View"""
     
@@ -19,39 +18,48 @@ class CategoriesView(ViewSet):
         Returns:
             Response -- JSON serialized category
         """
-        category = Categories.objects.filter(pk=pk).first()
-        
-        if category is None:
+        try:
+            category = Categories.objects.get(pk=pk)
+            serializer = CategoriesSerializer(category)
+            return Response(serializer.data)
+        except Categories.DoesNotExist:
             return Response({'message': 'Category not found.'}, status=status.HTTP_404_NOT_FOUND)
-        serializer = CategoriesSerializer(category)
-        return Response(serializer.data)
+        except Exception as ex:
+            return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     
     def list(self, request):
-        """Handel GET requests to get all categories
+        """Handle GET requests to get all categories
         
         Returns:
             Response -- JSON serialized list of categories
         """
-        
-        category = Categories.objects.all()
-        if not category.exists():
-            return Response({'message': 'Categories not found.'}, status=status.HTTP_404_NOT_FOUND)
-        serializer = CategoriesSerializer(category, many=True)
-        return Response(serializer.data)
+        try:
+            categories = Categories.objects.all()
+            if not categories.exists():
+                return Response({'message': 'Categories not found.'}, status=status.HTTP_404_NOT_FOUND)
+            serializer = CategoriesSerializer(categories, many=True)
+            return Response(serializer.data)
+        except Exception as ex:
+            return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     
     def create(self, request):
         """Handle Create Requests for categories"""
-        new_category = Categories()
-        new_category.category = request.data["category"]
-        new_category.save()
-        serializer = CategoriesSerializer(new_category)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        try:
+            new_category = Categories()
+            new_category.category = request.data["category"]
+            new_category.save()
+            serializer = CategoriesSerializer(new_category)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        except Exception as ex:
+            return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     
     def destroy(self, request, pk):
+        """Handles the delete functionality"""
         try:
             category = Categories.objects.get(pk=pk)
             category.delete()
-            
             return Response('The Category was deleted', status=status.HTTP_204_NO_CONTENT)
-        except Categories.DoesNotExist as ex:
+        except Categories.DoesNotExist:
             return Response({'message': 'No category found to delete'}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
