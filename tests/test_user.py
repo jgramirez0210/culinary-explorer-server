@@ -6,20 +6,24 @@ from culinary_explorer_api.models import User
 class UserTests(TestCase):
     def setUp(self):
         """Data set up for the tests"""
-        self.client = User.objects.first()
+        self.user_data = User.objects.create(
+          first_name = "John",
+          last_name = "Doe",
+          email_address = "johnD@example.com",
+          profile_image_url = "https://shorturl.at/iJM42",
+          uid = "2321skm3lsl3ms3sas3fdfmasd32sa" 
+        )
 
     def test_register_user(self):
         """Test user registration"""
-
         url = "/register"
 
-        # Use the fixture data for the user
         user_data = {
-            "first_name": "Gedeon",
-            "last_name": "Mulamba",
-            "email_address": "gedeon.mulamba@example.com",
-            "profile_image_url": "https://www.google.com",
-            "uid": "12345"
+            "first_name": "Jane",
+            "last_name": "Doe",
+            "email_address": "JaneD@example.com",
+            "profile_image_url": "https://shorturl.at/iJM42",
+            "uid": "sdwe24fr31qsddwqqe213124fqsd"
         }
 
         response = self.client.post(url, user_data, format='json')
