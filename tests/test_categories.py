@@ -12,7 +12,6 @@ class TestCategories(APITestCase):
         self.category = Categories.objects.first()
         self.detail_url = reverse('categories-detail', kwargs={'pk': self.category.pk})   
         self.list_url = reverse('categories-list')
-        print(f"Setup category: {self.category}")
 
     def test_category_setup(self):
         """Test to ensure setup is correct"""
@@ -34,8 +33,16 @@ class TestCategories(APITestCase):
     def test_create_category(self):
         """Create a Category Test"""
         url = reverse('categories-list')
-        categories_payload = {"category": "Asian"}
+        categories_payload = {'category': 'Asiann'}
         response = self.client.post(url, categories_payload, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        
         response = self.client.post(self.list_url)
+
+    def test_delete_category(self):
+        """Test deleting a category"""
+        category = Categories.objects.first()
+        url = f'/categories/{category.id}'
+        response = self.client.delete(url)
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
