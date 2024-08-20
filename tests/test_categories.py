@@ -1,6 +1,6 @@
-from rest_framework.test import APITestCase
 from rest_framework import status
 from django.urls import reverse
+from rest_framework.test import APITestCase
 from culinary_explorer_api.models import Categories
 
 class TestCategories(APITestCase):
@@ -30,3 +30,12 @@ class TestCategories(APITestCase):
         all_categories = Categories.objects.all()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data), all_categories.count())
+        
+    def test_create_category(self):
+        """Create a Category Test"""
+        url = reverse('categories-list')
+        categories_payload = {"category": "Asian"}
+        response = self.client.post(url, categories_payload, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        
+        response = self.client.post(self.list_url)
