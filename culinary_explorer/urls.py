@@ -2,10 +2,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
-from culinary_explorer_api.views import register_user, check_user, CategoriesView
+from culinary_explorer_api.views import register_user, check_user, CategoriesView, FoodLogView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'categories', CategoriesView, 'categories')
+router.register(r'food_log', FoodLogView, 'food_log')
 
 
 urlpatterns = [
