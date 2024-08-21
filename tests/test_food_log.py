@@ -52,4 +52,10 @@ class TestFoodLog(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         
     def test_delete_food_log_entry(self):
-        """Test to delete a food log entry"""        
+        """Test to delete a food log entry""" 
+        food_log = Food_Log.objects.first()
+        url = f'/food_log/{food_log.id}'
+        response = self.client.delete(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)      
