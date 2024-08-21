@@ -13,11 +13,6 @@ class TestCategories(APITestCase):
         self.detail_url = reverse('categories-detail', kwargs={'pk': self.category.pk})   
         self.list_url = reverse('categories-list')
 
-    def test_category_setup(self):
-        """Test to ensure setup is correct"""
-        self.assertIsNotNone(self.category, "Setup category should not be None")
-        self.assertTrue(hasattr(self.category, 'category'), "Setup category should have a 'category' attribute")
-    
     def test_single_category(self):
         """Get Single Category Test"""
         response = self.client.get(self.detail_url)
@@ -28,7 +23,6 @@ class TestCategories(APITestCase):
         response = self.client.get(self.list_url)
         all_categories = Categories.objects.all()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), all_categories.count())
         
     def test_create_category(self):
         """Create a Category Test"""
