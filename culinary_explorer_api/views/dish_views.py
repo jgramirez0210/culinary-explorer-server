@@ -68,3 +68,12 @@ class DishView(viewsets.ModelViewSet):
             return Response({'message': 'Dish not found'}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'error': str(ex)}, status=status.HTTP_400_BAD_REQUEST)
+        
+    def destroy(self, request, pk):
+        """Delete dish test"""
+        try:
+            dish = Dish.objects.get(pk=pk)
+            dish.delete()
+            return Response(None, status=status.HTTP_204_NO_CONTENT)
+        except Dish.DoesNotExist:
+            return Response(dish.errors, status=status.HTTP_404_NOT_FOUND)
