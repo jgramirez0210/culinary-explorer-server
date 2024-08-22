@@ -96,10 +96,12 @@ class FoodLogView(viewsets.ModelViewSet):
             return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
         
     def destroy(self, request, pk):
-        """Test to delete food log entry"""
+        """Delete food log entry"""
         try:
             food_log = Food_Log.objects.get(pk=pk)
             food_log.delete()
             return Response(None, status=status.HTTP_204_NO_CONTENT)    
         except Food_Log.DoesNotExist:
             return Response(food_log.errors, status=status.HTTP_404_NOT_FOUND)    
+        
+            
