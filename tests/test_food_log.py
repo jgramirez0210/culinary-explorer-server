@@ -1,6 +1,7 @@
 from rest_framework import status
 from django.urls import reverse
 from rest_framework.test import APITestCase
+from rest_framework.response import Response
 from culinary_explorer_api.models import Food_Log, Categories, Restaurants, Dish, User
 
 class TestFoodLog(APITestCase):
@@ -51,3 +52,4 @@ class TestFoodLog(APITestCase):
         response = self.client.put(self.detail_url, update_entry, format='json')
         print(response.content)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+        
