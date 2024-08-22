@@ -5,8 +5,10 @@ from .serializers import DishSerializer
 
 class DishView(viewsets.ModelViewSet):
     
-    queryset = Dish.objects.all()
     serializer_class = DishSerializer
+
+    def get_queryset(self):
+        return Dish.objects.all()
     
     def retrieve(self, request, pk):
         """Handel GET requests for single dish view
@@ -36,4 +38,16 @@ class DishView(viewsets.ModelViewSet):
             serializer = DishSerializer(dish, many=True)
             return Response(serializer.data)
         except Exception as ex:
-            return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)       
+            return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)      
+        
+    def create(self, request):
+        """Handle POST requests to create a new dish
+        
+        Returns:
+            Response -- JSON serialized 
+        """
+        serializer = DishSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)             
