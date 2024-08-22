@@ -46,7 +46,7 @@ class TestDishes(APITestCase):
             'food_image_url' : 'https://shorturl.at/aTQIv',
             'price' : '22.99'
         }
-        response = self.client.put(self.url, update_dish_payload, format='json')
+        response = self.client.put(self.detail_url, update_dish_payload, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         
     # def test_delete_dish(self):
