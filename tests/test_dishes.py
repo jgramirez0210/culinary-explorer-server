@@ -4,12 +4,12 @@ from rest_framework.test import APITestCase
 from culinary_explorer_api.models import Dish
 
 class TestDishes(APITestCase):
-    fixtures = 'dishes.json'
+    fixtures = ['dish.json']
     
     def setUp(self):
         """Data set up for tests"""
-        self.dish = Dish.object.first()
-        self.detail_url = reverse('dish-detail', kwargs={'pk':self.food_log.pk})
+        self.dish = Dish.objects.first()
+        self.detail_url = reverse('dish-detail', kwargs={'pk':self.dish.pk})
         self.list_url = reverse('dish-list')
         
     def test_get_single_dish(self):
