@@ -8,6 +8,7 @@ router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'categories', CategoriesView, 'categories')
 router.register(r'food_log', FoodLogView, 'food_log')
 router.register(r'dish', DishView, 'dish')
+router.register(r'restaurants', RestaurantView, 'restaurant')
 
 
 urlpatterns = [

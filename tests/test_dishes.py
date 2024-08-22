@@ -7,7 +7,7 @@ class TestDishes(APITestCase):
     fixtures = ['dish.json']
     
     def setUp(self):
-        """Data set up for tests"""
+        """Data set up for dishes tests"""
         self.dish = Dish.objects.first()
         self.detail_url = reverse('dish-detail', kwargs={'pk':self.dish.pk})
         self.list_url = reverse('dish-list')
