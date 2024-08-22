@@ -50,4 +50,21 @@ class DishView(viewsets.ModelViewSet):
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)             
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    def update(self, request, pk=None):
+        """Handle PUT requests to update a dish
+        
+        Returns:
+            Response -- JSON serialized
+        """
+        try:
+            dish = Dish.objects.get(pk=pk)
+            serializer = self.get_serializer(dish, data=request.data)
+            serializer.is_valid(raise_exception=True)
+            self.perform_update(serializer)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Dish.DoesNotExist:
+            return Response({'message': 'Dish not found'}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return Response({'error': str(ex)}, status=status.HTTP_400_BAD_REQUEST)
