@@ -18,4 +18,18 @@ class RestaurantView(viewsets.ModelViewSet):
             return Response({'message': 'Restaurant not found'}, status=status.HTTP_404_NOT_FOUND)
         except Exception as ex:
             return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    def list(self, request):
+        """Handle GET requests to get all restaurant entries
+        
+        Returns:
+            Response -- JSON serialized list of restaurants
+        """
+        try: 
+            restaurant = Restaurants.objects.all()
+            if not restaurant.exists():
+                return Response({'message': 'Restaurants not found'})
+            serializer = RestaurantSerializer(restaurant, many = True)
+            return Response(serializer.data)
+        except Exception as ex:
+            return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
