@@ -84,7 +84,13 @@ Follow these steps to set up and run the project:
     click file_name_item_name
     click play to the right of item name
     ```
-
+# ENV SET UP
+    ``` sh
+NEXT_PUBLIC_FIREBASE_API_KEY=""
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=""
+# Add your Server URL to the NEXT_PUBLIC_DATABASE_URL variable below (ex: http://localhost:8000)
+NEXT_PUBLIC_DATABASE_URL="http://localhost:8000
+    ```
 
 # TECH / FRAMEWORK USED
 - ![ERD](assets/erd.png "Screenshot 2024-07-17") 
