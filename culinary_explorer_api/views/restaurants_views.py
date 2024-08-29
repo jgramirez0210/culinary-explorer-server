@@ -44,3 +44,20 @@ class RestaurantView(viewsets.ModelViewSet):
             restaurants = serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
+    
+    def update(self, request, pk=None):
+        try:
+            restaurants = Restaurants.objects.get(pk=pk)
+            restaurants.delete()
+            return Response(None, status=status.HTTP_204_NO_CONTENT)
+        except Restaurants.DoesNotExist:
+            return Response(restaurants.errors, status=status.HTTP_404_NOT_FOUND)
+    
+    def destroy(self, request, pk):
+        """Delete Restaurant"""
+        try:
+            restaurant = Restaurants.objects.get(pk=pk)
+            restaurant.delete()        
+            return Response(None, status=status.HTTP_204_NO_CONTENT)
+        except Restaurants.DoesNotExist:
+            return Response(restaurant.errors, status=status.http404)
