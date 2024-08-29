@@ -32,4 +32,15 @@ class RestaurantView(viewsets.ModelViewSet):
             return Response(serializer.data)
         except Exception as ex:
             return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    def create(self, request):
+        """Handle POST requests to create a new restaurant
         
+        Returns:
+            Response -- JSON serialized 
+        """
+        serializer = RestaurantSerializer(data=request.data)
+        if serializer.is_valid():
+            restaurants = serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
