@@ -5,6 +5,9 @@ from .serializers import RestaurantSerializer
 
 
 class RestaurantView(viewsets.ModelViewSet):
+    queryset = Restaurants.objects.all()
+    serializer_class = RestaurantSerializer
+    
     def retrieve(self, request, pk):
         """Handel GET requests for a single restaurant
         
@@ -46,12 +49,17 @@ class RestaurantView(viewsets.ModelViewSet):
         return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
     
     def update(self, request, pk=None):
+        """Handle PUT requests to update a restaurant"""
         try:
-            restaurants = Restaurants.objects.get(pk=pk)
-            restaurants.delete()
-            return Response(None, status=status.HTTP_204_NO_CONTENT)
+            restaurant = self.get_object()
+            serializer = self.get_serializer(restaurant, data=request.data)
+            serializer.is_valid(raise_exception=True)
+            self.perform_update(serializer)
+            return Response(serializer.data, status=status.HTTP_200_OK)
         except Restaurants.DoesNotExist:
-            return Response(restaurants.errors, status=status.HTTP_404_NOT_FOUND)
+            return Response({'message': 'Restaurant not found'}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as ex:
+            return Response({'message': str(ex)}, status=status.HTTP_400_BAD_REQUEST)
     
     def destroy(self, request, pk):
         """Delete Restaurant"""
