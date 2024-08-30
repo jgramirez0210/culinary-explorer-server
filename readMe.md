@@ -60,7 +60,7 @@ Follow these steps to set up and run the project:
     ```sh
     Starting development server at http://127.0.0.1:8000/
     ```
-  ![Screenshot](assets/api_root.png "ScreenshSot 2024-07-15 192448") 
+  ![Screenshot](assets/api_root.png "Screenshot of the root api 2024-08-30") 
 
 
 ## TO LOAD FIXTURES 
@@ -87,12 +87,12 @@ Follow these steps to set up and run the project:
     click play to the right of item name
     ```
 # ENV SET UP
-    ``` sh
-NEXT_PUBLIC_FIREBASE_API_KEY=""
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=""
-# Add your Server URL to the NEXT_PUBLIC_DATABASE_URL variable below (ex: http://localhost:8000)
-NEXT_PUBLIC_DATABASE_URL="http://localhost:8000
-    ```
+
+- NEXT_PUBLIC_FIREBASE_API_KEY=""
+- NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=""
+- # Add your Server URL to the NEXT_PUBLIC_DATABASE_URL variable below (ex: http://localhost:8000)
+- NEXT_PUBLIC_DATABASE_URL="http://localhost:8000
+    
 
 # TECH / FRAMEWORK USED
 - ![ERD](assets/culinary_explorer_erd.png "Screenshot of ERD 2024-08-30") 
