@@ -1,8 +1,10 @@
-# LEVEL UP: YOUR ULTIMATE GAMING PLATFORM
+# CULINARY EXPLORER
 
 
 # FEATURES
-
+- Landing page for non authorized users to get to know a bit about Culinary Explorer without having to sing up for an account. 
+- Google auth through Firebase Auth.
+- Allows users to create, edit, and delete their notes on restaurants compliance with dietary restrictions based on who's logged in. 
 
 # PROJECT SETUP INSTRUCTIONS FOR FIRST TIME INSTALLATION
 Follow these steps to set up and run the project:
@@ -93,8 +95,8 @@ NEXT_PUBLIC_DATABASE_URL="http://localhost:8000
     ```
 
 # TECH / FRAMEWORK USED
-- ![ERD](assets/erd.png "Screenshot 2024-07-17") 
-- [API Documentation](https://documenter.getpostman.com/view/29856352/2sA3kSo3i8)
+- ![ERD](assets/culinary_explorer_erd.png "Screenshot of ERD 2024-08-30") 
+- [API Documentation](https://documenter.getpostman.com/view/29856352/2sAXjKbYPn)
 
 ### BUILT WITH  
 - React
@@ -103,16 +105,21 @@ NEXT_PUBLIC_DATABASE_URL="http://localhost:8000
 - Firebase
 
 # TESTS
-- Tests CRUD on Events, Gamer, & Game
-- Tests get single and get all on Game Type 
+- User: CR
+- Food_Log: CRUD
+- Restaurant: CRUD
+- Dish: CRUD
+- Category: CRUD
+- Food_log_Category: CRD
 
 1. Open terminal and run tests:
     ```sh
     python manage.py test
     ```
+- ![ERD](assets/tests.png "Screenshot of working tests 2024-08-30")     
 
 # TESTING API'S IN POSTMAN
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29856352-fe239767-c915-4ee4-816a-98391d697b67?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29856352-fe239767-c915-4ee4-816a-98391d697b67%26entityType%3Dcollection%26workspaceId%3D05f2e31e-03ef-427f-b169-137d2a156107)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29856352-163c6545-7056-4f07-849c-8ffef5b5891d?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29856352-163c6545-7056-4f07-849c-8ffef5b5891d%26entityType%3Dcollection%26workspaceId%3De6b25edf-b010-4ed0-8f1e-fc0ea9066ca2)
 
 # CREDITS
 

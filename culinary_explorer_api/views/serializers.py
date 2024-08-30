@@ -9,7 +9,7 @@ class DishSerializer(serializers.ModelSerializer):
 class RestaurantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Restaurants
-        fields = ['restaurant_name', 'restaurant_address', 'website_url']        
+        fields = ['id', 'restaurant_name', 'restaurant_address', 'website_url']        
         
 class CategorySerializer(serializers.ModelSerializer):
     """JSON Serializer for categories"""
