@@ -60,7 +60,7 @@ Follow these steps to set up and run the project:
     ```sh
     Starting development server at http://127.0.0.1:8000/
     ```
-  ![Screenshot](assets/api_root.png "ScreenshSot 2024-07-15 192448") 
+  ![Screenshot](assets/api_root.png "Screenshot of the root api 2024-08-30") 
 
 
 ## TO LOAD FIXTURES 
