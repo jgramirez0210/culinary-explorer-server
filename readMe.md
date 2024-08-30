@@ -90,8 +90,8 @@ Follow these steps to set up and run the project:
 
 - NEXT_PUBLIC_FIREBASE_API_KEY=""
 - NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=""
-- # Add your Server URL to the NEXT_PUBLIC_DATABASE_URL variable below (ex: http://localhost:8000)
-- NEXT_PUBLIC_DATABASE_URL="http://localhost:8000
+- <span style="color:gray">Add your Server URL to the NEXT_PUBLIC_DATABASE_URL variable below (ex: http://localhost:8000)</span>
+- NEXT_PUBLIC_DATABASE_URL="http://localhost:8000"
     
 
 # TECH / FRAMEWORK USED
