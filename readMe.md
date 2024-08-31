@@ -1,5 +1,6 @@
 # CULINARY EXPLORER
-
+## PROJECT OVERVIEW
+- Dining out can become a complex and often stressful experience for people with dietary restrictions, such as allergies or intolerances. That is where Culinary Explorer steps in, it creates a single spot where you can log the different restaurants you've eaten at and your experience.
 
 # FEATURES
 - Landing page for non authorized users to get to know a bit about Culinary Explorer without having to sing up for an account. 
@@ -97,6 +98,7 @@ Follow these steps to set up and run the project:
 # TECH / FRAMEWORK USED
 - ![ERD](assets/culinary_explorer_erd.png "Screenshot of ERD 2024-08-30") 
 - [API Documentation](https://documenter.getpostman.com/view/29856352/2sAXjKbYPn)
+- [Project Board](https://github.com/users/jgramirez0210/projects/10/views/1?layout=table)
 
 ### BUILT WITH  
 - React
@@ -123,4 +125,4 @@ Follow these steps to set up and run the project:
 
 # CREDITS
 
-- Jesse Ramirez 
+- [Jesse Ramirez](https://github.com/jgramirez0210) 
