@@ -4,7 +4,7 @@ from culinary_explorer_api.models import Dish, Restaurants, Categories, Food_Log
 class DishSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dish
-        fields = ['dish_name', 'description', 'notes', 'food_image_url', 'price'] 
+        fields = ['id', 'dish_name', 'description', 'notes', 'food_image_url', 'price'] 
         
 class RestaurantSerializer(serializers.ModelSerializer):
     class Meta:
@@ -15,7 +15,7 @@ class CategorySerializer(serializers.ModelSerializer):
     """JSON Serializer for categories"""
     class Meta:
         model = Categories
-        fields = ['category']
+        fields = ['id', 'category']
 
 class FoodLogSerializer(serializers.ModelSerializer):
     """JSON Serializer for food log"""

@@ -121,7 +121,7 @@ Follow these steps to set up and run the project:
 - ![ERD](assets/tests.png "Screenshot of working tests 2024-08-30")
 
 # BACKEND MVP WALKTHROUGH VIDEO
-- [Backend MVP Walkthrough Video](https://drive.google.com/file/d/1LZBXlGxhEr33mXsOa2TVJgwYoE977_en/view?usp=sharing)
+- [Backend MVP Walkthrough Video](https://drive.google.com/file/d/1t9F-chf2O1ODbn1g3bzfobI1PUFDcwXv/view?usp=sharing)
 
 # TESTING API'S IN POSTMAN
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29856352-163c6545-7056-4f07-849c-8ffef5b5891d?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29856352-163c6545-7056-4f07-849c-8ffef5b5891d%26entityType%3Dcollection%26workspaceId%3De6b25edf-b010-4ed0-8f1e-fc0ea9066ca2)
