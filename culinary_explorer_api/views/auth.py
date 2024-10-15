@@ -1,7 +1,6 @@
-from culinary_explorer_api.models import User
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
+from culinary_explorer_api.models import User
 
 @api_view(['POST'])
 def check_user(request):
@@ -10,6 +9,9 @@ def check_user(request):
     Method arguments:
       request -- The full HTTP request object
     '''
+    if 'uid' not in request.data:
+        return Response({'error': 'uid is required'}, status=400)
+
     uid = request.data['uid']
 
     # Use the built-in authenticate method to verify
@@ -40,23 +42,25 @@ def register_user(request):
     Method arguments:
       request -- The full HTTP request object
     '''
+    required_fields = ['first_name', 'last_name', 'email_address', 'uid']
+    for field in required_fields:
+        if field not in request.data:
+            return Response({'error': f'{field} is required'}, status=400)
 
     # Now save the user info in the culinary_explorer_api table
     user = User.objects.create(
         first_name=request.data['first_name'],
         last_name=request.data['last_name'],
         email_address=request.data['email_address'],
-        profile_image_url=request.data['profile_image_url'],
         uid=request.data['uid']
     )
 
-    # Return the user info to the client
     data = {
-            'id': user.id,
-            'first_name': user.first_name,
-            'last_name': user.last_name,
-            'email_address': user.email_address,
-            'profile_image_url': user.profile_image_url,
-            'uid': user.uid,
+        'id': user.id,
+        'first_name': user.first_name,
+        'last_name': user.last_name,
+        'email_address': user.email_address,
+        'profile_image_url': user.profile_image_url,
+        'uid': user.uid,
     }
     return Response(data)

@@ -52,18 +52,16 @@ TEMPLATES = [
     },
 ]
 
-DEBUG = True
+DEBUG = True  # Set to False in production
 STATIC_URL = '/static/'
 ROOT_URLCONF = 'culinary_explorer.urls'
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite',
     }
 }
-
-load_dotenv()
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
@@ -76,7 +74,6 @@ REST_FRAMEWORK = {
 USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = "/static/"
 
 # Updated STORAGES setting
 STORAGES = {
@@ -87,3 +84,10 @@ STORAGES = {
         'BACKEND': 'django.contrib.staticfiles.storage.StaticFilesStorage',
     },
 }
+
+# Configure Django App for Heroku.
+django_on_heroku.settings(locals())
+
+# Ensure STATICFILES_STORAGE is not set after django_on_heroku.settings(locals())
+if 'STATICFILES_STORAGE' in locals():
+    del locals()['STATICFILES_STORAGE']

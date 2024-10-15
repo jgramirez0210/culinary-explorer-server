@@ -3,7 +3,13 @@
     "ignorePaths": [],
     "dictionaryDefinitions": [],
     "dictionaries": [],
-    "words": ["Pipenv"],
-    "ignoreWords": ["Pipenv"],
+    "words": [
+        "corsheaders",
+        "dotenv",
+        "Pipenv"
+    ],
+    "ignoreWords": [
+        "Pipenv"
+    ],
     "import": []
 }

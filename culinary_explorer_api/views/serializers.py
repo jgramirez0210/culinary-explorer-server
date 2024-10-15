@@ -18,7 +18,7 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = ['id', 'category']
 
 class FoodLogSerializer(serializers.ModelSerializer):
-    """JSON Serializer for food log"""
+    """JSON Serializer for all food log"""
     restaurant = RestaurantSerializer(read_only=True)
     dish = DishSerializer(read_only=True)
     category = CategorySerializer(many=True, read_only=True)
@@ -35,4 +35,5 @@ class FoodLogSerializer(serializers.ModelSerializer):
             'dish': {'required': False},
             'category': {'required': False},
         }
+    
     
