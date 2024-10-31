@@ -13,6 +13,10 @@ pylint-django = "==2.5.3"
 python-dotenv = "*"
 gunicorn = "*"
 django-on-heroku = "*"
+django-environ = "*"
+dj-database-url = "*"
+psycopg2 = "*"
+whitenoise = "*"
 
 [dev-packages]
 pytest = "*"
