@@ -1,5 +1,6 @@
 from rest_framework.response import Response
 from rest_framework import serializers, status, viewsets
+from rest_framework.decorators import action
 from culinary_explorer_api.models import Food_Log, Restaurants, Dish, Categories
 from .serializers import RestaurantSerializer
 
@@ -69,3 +70,17 @@ class RestaurantView(viewsets.ModelViewSet):
             return Response(None, status=status.HTTP_204_NO_CONTENT)
         except Restaurants.DoesNotExist:
             return Response(restaurant.errors, status=status.http404)
+        
+    @action(detail=False, methods=['get'])
+    def uid(self, request):
+        """Retrieve restaurants by user ID"""
+        user_id = request.query_params.get('uid', None)
+        if user_id:
+            restaurants = self.queryset.filter(uid=user_id)
+            if restaurants.exists():
+                serializer = self.get_serializer(restaurants, many=True)
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            else:
+                return Response({'message': 'No entries found for the given user ID'}, status=status.HTTP_404_NOT_FOUND)
+        else:
+            return Response({'message': 'User ID not provided'}, status=status.HTTP_400_BAD_REQUEST)

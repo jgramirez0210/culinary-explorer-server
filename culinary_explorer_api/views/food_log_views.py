@@ -79,3 +79,17 @@ class FoodLogView(viewsets.ModelViewSet):
                 return Response({'message': 'No entries found for the given restaurant IDs'}, status=status.HTTP_404_NOT_FOUND)
         else:
             return Response({'message': 'Restaurant ID not provided'}, status=status.HTTP_400_BAD_REQUEST)
+        
+    @action(detail=False, methods=['get'])
+    def uid(self, request):
+        """Retrieve food log entries by user ID"""
+        user_id = request.query_params.get('uid', None)
+        if user_id:
+            food_logs = self.queryset.filter(uid=user_id)
+            if food_logs.exists():
+                serializer = self.get_serializer(food_logs, many=True)
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            else:
+                return Response({'message': 'No entries found for the given user ID'}, status=status.HTTP_404_NOT_FOUND)
+        else:
+            return Response({'message': 'User ID not provided'}, status=status.HTTP_400_BAD_REQUEST)
