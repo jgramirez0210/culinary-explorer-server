@@ -43,11 +43,13 @@ class RestaurantView(viewsets.ModelViewSet):
         Returns:
             Response -- JSON serialized 
         """
-        serializer = RestaurantSerializer(data=request.data)
+        data = request.data.copy()
+        data['uid'] = request.user.id  # Assuming you want to use the ID of the currently authenticated user
+        serializer = RestaurantSerializer(data=data)
         if serializer.is_valid():
-            restaurants = serializer.save()
+            restaurant = serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.data,status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     def update(self, request, pk=None):
         """Handle PUT requests to update a restaurant"""
