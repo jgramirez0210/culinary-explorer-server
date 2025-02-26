@@ -5,7 +5,7 @@
             "dish_name": "Pizza",
             "description": "A delicious pizza with pepperoni, sausage, and pinaepple",
             "notes": "Extra cheese",
-            "food_image_url": "https://shorturl.at/cKyvE",
+            "food_image_url": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "price": 12.99
         }
     },     
@@ -15,7 +15,7 @@
             "dish_name": "Pad Thai",
             "description": "Chicken pad thai wiht no onions",
             "notes": "No onions",
-            "food_image_url": "https://shorturl.at/X93jD",
+            "food_image_url": "https://images.unsplash.com/photo-1559314809-0d155014e29e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
             "price": 12.99
         }
     }
