@@ -4,7 +4,8 @@
         "fields": {
             "restaurant_name": "Franks Pizza",
             "restaurant_address": "417 Travis St. Houston, TX 77002",
-            "website_url": "https://www.frankspizza.com/"
+            "website_url": "https://www.frankspizza.com/",
+            "uid": "default_user"
         }
     },     
     {
@@ -12,8 +13,8 @@
         "fields": {
             "restaurant_name": "NUA Thai",
             "restaurant_address": "2020 Louisiana Street, Houston, TX 77002",
-            "website_url": "https://www.nuathairestaurant.com/"
+            "website_url": "https://www.nuathairestaurant.com/",
+            "uid": "default_user"
         }
     }
-  ]
-  
+]
