@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 import django_on_heroku
-from environ import Env
+from environs import Env
 import dj_database_url
 
 
@@ -17,10 +17,10 @@ env.read_env(os.path.join(BASE_DIR, ".env"))
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Use environment variables for sensitive settings
-SECRET_KEY = env("SECRET_KEY")
-DEBUG = env.bool("DEBUG")
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
-CORS_ORIGIN_WHITELIST = env.list("CORS_ORIGIN_WHITELIST")
+SECRET_KEY = env("SECRET_KEY", default="your-secret-key")
+DEBUG = env.bool("DEBUG", default=True)
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["localhost", "127.0.0.1"])
+CORS_ORIGIN_WHITELIST = env.list("CORS_ORIGIN_WHITELIST", default=["http://localhost:3000", "http://127.0.0.1:3000"])
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -87,7 +87,7 @@ DATABASES = {
   )
 }
 
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+SECRET_KEY = 'your-secret-key'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
