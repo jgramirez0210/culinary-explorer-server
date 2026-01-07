@@ -2,11 +2,41 @@
   {
       "model": "culinary_explorer_api.user",
       "fields": {
+          "first_name": "Jesse",
+          "last_name": "Ramirez",
+          "email_address": "jgramirez0210@gmail.com",
+          "profile_image_url": "https://firebasestorage.googleapis.com/v0/b/culinaryexplorer-5a9b7.appspot.com/o/profile_images%2FaPkqPWh2qYXzL2OHlFunih1ZR3U2.jpg?alt=media&token=12345678-1234-1234-1234-123456789012",
+          "uid": "aPkqPWh2qYXzL2OHlFunih1ZR3U2"
+      }
+  },
+  {
+      "model": "culinary_explorer_api.user",
+      "fields": {
           "first_name": "Gedeon",
           "last_name": "Ramirez",
           "email_address": "gedeon.ram.dev@gmail.com",
           "profile_image_url": "https://lh3.googleusercontent.com/a-/AOh14Gj",
           "uid": "T4r4GagFtNhgC87I8bDcr78WUtZ2"
+      }
+  },
+  {
+      "model": "culinary_explorer_api.user",
+      "fields": {
+          "first_name": "Alice",
+          "last_name": "Johnson",
+          "email_address": "alice.johnson@example.com",
+          "profile_image_url": "https://example.com/profiles/alice.jpg",
+          "uid": "user_alice_123"
+      }
+  },
+  {
+      "model": "culinary_explorer_api.user",
+      "fields": {
+          "first_name": "Bob",
+          "last_name": "Smith",
+          "email_address": "bob.smith@example.com",
+          "profile_image_url": "https://example.com/profiles/bob.jpg",
+          "uid": "user_bob_456"
       }
   }
 ]

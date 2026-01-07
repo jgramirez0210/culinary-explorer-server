@@ -3,21 +3,81 @@
         "model": "culinary_explorer_api.dish",
         "fields": {
             "dish_name": "Pizza",
-            "description": "A delicious pizza with pepperoni, sausage, and pinaepple",
+            "description": "A delicious pizza with pepperoni, sausage, and pineapple",
             "notes": "Extra cheese",
             "food_image_url": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "price": 12.99
+            "price": "$12.99"
         }
-    },     
+    },
     {
         "model": "culinary_explorer_api.dish",
         "fields": {
             "dish_name": "Pad Thai",
-            "description": "Chicken pad thai wiht no onions",
+            "description": "Chicken pad thai with no onions",
             "notes": "No onions",
             "food_image_url": "https://images.unsplash.com/photo-1559314809-0d155014e29e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "price": 12.99
+            "price": "$12.99"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.dish",
+        "fields": {
+            "dish_name": "Margherita Pizza",
+            "description": "Classic Italian pizza with tomato sauce, mozzarella cheese, and fresh basil",
+            "notes": "Vegetarian option available",
+            "food_image_url": "https://example.com/images/margherita-pizza.jpg",
+            "price": "$12.99"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.dish",
+        "fields": {
+            "dish_name": "California Roll",
+            "description": "Sushi roll with crab, avocado, and cucumber",
+            "notes": "Contains shellfish",
+            "food_image_url": "https://example.com/images/california-roll.jpg",
+            "price": "$8.50"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.dish",
+        "fields": {
+            "dish_name": "Beef Tacos",
+            "description": "Three soft tacos filled with seasoned ground beef, lettuce, cheese, and salsa",
+            "notes": "Spicy option available",
+            "food_image_url": "https://example.com/images/beef-tacos.jpg",
+            "price": "$9.99"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.dish",
+        "fields": {
+            "dish_name": "Chicken Parmesan",
+            "description": "Breaded chicken breast topped with marinara sauce and melted cheese, served with spaghetti",
+            "notes": "Gluten-free pasta available",
+            "food_image_url": "https://example.com/images/chicken-parmesan.jpg",
+            "price": "$16.99"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.dish",
+        "fields": {
+            "dish_name": "Kung Pao Chicken",
+            "description": "Spicy Chinese dish with chicken, peanuts, vegetables, and chili peppers",
+            "notes": "Very spicy - contains nuts",
+            "food_image_url": "https://example.com/images/kung-pao-chicken.jpg",
+            "price": "$13.99"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.dish",
+        "fields": {
+            "dish_name": "Caesar Salad",
+            "description": "Crisp romaine lettuce with Caesar dressing, croutons, and parmesan cheese",
+            "notes": "Add chicken for extra protein",
+            "food_image_url": "https://example.com/images/caesar-salad.jpg",
+            "price": "$8.99"
         }
     }
-  ]
+]
   

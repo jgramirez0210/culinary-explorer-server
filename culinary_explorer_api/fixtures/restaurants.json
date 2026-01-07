@@ -4,16 +4,54 @@
         "fields": {
             "restaurant_name": "Franks Pizza",
             "restaurant_address": "417 Travis St. Houston, TX 77002",
-            "website_url": "https://www.frankspizza.com/"
+            "website_url": "https://www.frankspizza.com/",
+            "uid": "rest_franks_001"
         }
-    },     
+    },
     {
         "model": "culinary_explorer_api.restaurants",
         "fields": {
             "restaurant_name": "NUA Thai",
             "restaurant_address": "2020 Louisiana Street, Houston, TX 77002",
-            "website_url": "https://www.nuathairestaurant.com/"
+            "website_url": "https://www.nuathairestaurant.com/",
+            "uid": "rest_nua_002"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.restaurants",
+        "fields": {
+            "restaurant_name": "Bella Italia",
+            "restaurant_address": "123 Main St, Anytown, USA",
+            "website_url": "https://bella-italia.com",
+            "uid": "rest_bella_003"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.restaurants",
+        "fields": {
+            "restaurant_name": "Sakura Sushi",
+            "restaurant_address": "456 Oak Ave, Somewhere, USA",
+            "website_url": "https://sakura-sushi.com",
+            "uid": "rest_sakura_004"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.restaurants",
+        "fields": {
+            "restaurant_name": "Taco Fiesta",
+            "restaurant_address": "789 Pine Rd, Elsewhere, USA",
+            "website_url": "https://taco-fiesta.com",
+            "uid": "rest_taco_005"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.restaurants",
+        "fields": {
+            "restaurant_name": "Golden Dragon",
+            "restaurant_address": "321 Elm St, Chinatown, USA",
+            "website_url": "https://golden-dragon.com",
+            "uid": "rest_dragon_006"
         }
     }
-  ]
+]
   
