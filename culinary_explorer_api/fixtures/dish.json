@@ -25,7 +25,7 @@
             "dish_name": "Margherita Pizza",
             "description": "Classic Italian pizza with tomato sauce, mozzarella cheese, and fresh basil",
             "notes": "Vegetarian option available",
-            "food_image_url": "https://example.com/images/margherita-pizza.jpg",
+            "food_image_url": "https://imgs.search.brave.com/xhoDrbolRhL6o-FsRNSN4NOAIroxsYqe-F12wTfqWUc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNDUx/ODY1OTcxL3Bob3Rv/L21hcmdoZXJpdGEt/cGl6emEuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPVZaMC1l/a0s2NmJubmI2aHR4/ZHZTOVJWWHlKWXlf/WW1YYll5Y1RackI5/MW89",
             "price": "$12.99"
         }
     },
@@ -35,7 +35,7 @@
             "dish_name": "California Roll",
             "description": "Sushi roll with crab, avocado, and cucumber",
             "notes": "Contains shellfish",
-            "food_image_url": "https://example.com/images/california-roll.jpg",
+            "food_image_url": "https://imgs.search.brave.com/xbfIyEe_Xubq7epEsA3xIypOwCS7totq4SfkAba0H1M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTgw/ODA5MzUxL3Bob3Rv/L2NhbGlmb3JuaWEt/cm9sbC5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9YWpNUFha/bDdDTHBsZWM1NlJQ/ZFE3SUdPYy1oejho/LU1nNjJ6U2ZMRVRN/UT0",
             "price": "$8.50"
         }
     },
@@ -45,7 +45,7 @@
             "dish_name": "Beef Tacos",
             "description": "Three soft tacos filled with seasoned ground beef, lettuce, cheese, and salsa",
             "notes": "Spicy option available",
-            "food_image_url": "https://example.com/images/beef-tacos.jpg",
+            "food_image_url": "https://imgs.search.brave.com/ZnAoFSB0LtJ6m30zdASuymN016Ik2W18G24oJy1y2Qw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZm9vZDUyLmNv/bS8xRFY3aGxXVEZv/aC1jOTd5Xzd0aGtj/SUZJd009L2NiYzIw/MTEzLTdjYjUtNGM3/Yy04NTFkLTUwYjU5/Y2I0MzM2Ni0tMjAy/Mi0xMjIyX3RhY29z/LWRvcmFkb3NfM3gy/X2phbWVzLXJhbnNv/bS0xODQuanBnP3c9/Mzg0MCZxPTc1",
             "price": "$9.99"
         }
     },
@@ -55,7 +55,7 @@
             "dish_name": "Chicken Parmesan",
             "description": "Breaded chicken breast topped with marinara sauce and melted cheese, served with spaghetti",
             "notes": "Gluten-free pasta available",
-            "food_image_url": "https://example.com/images/chicken-parmesan.jpg",
+            "food_image_url": "https://imgs.search.brave.com/SOYwBorRN4ckwN1BFmv2hryISL-l3W37ViAcpZgyc8A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNzAv/ODgxLzU4OC9zbWFs/bC9wcmVwYXJpbmct/Y2hpY2tlbi1wYXJt/LXdpdGgtbWVsdGVk/LWNoZWVzZS1hbmQt/dG9tYXRvLXRvcHBp/bmctcGhvdG8uanBn",
             "price": "$16.99"
         }
     },
@@ -65,7 +65,7 @@
             "dish_name": "Kung Pao Chicken",
             "description": "Spicy Chinese dish with chicken, peanuts, vegetables, and chili peppers",
             "notes": "Very spicy - contains nuts",
-            "food_image_url": "https://example.com/images/kung-pao-chicken.jpg",
+            "food_image_url": "https://imgs.search.brave.com/zxzRSXMyMKdJcS0OHMG3zvQRWId2OWCA0XAfFS5DPoo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE1/MTA2MDYxMy9waG90/by9rdW5nLXBvdy1z/aHJpbXAtYW5kLWNo/aWNrZW4uanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPXVqMkFJ/Z2VhVWJiRWJQVDlL/WHRHZl9TMzRtX1dx/UUNUNjZoVm1JZDVC/R1U9",
             "price": "$13.99"
         }
     },
@@ -75,7 +75,7 @@
             "dish_name": "Caesar Salad",
             "description": "Crisp romaine lettuce with Caesar dressing, croutons, and parmesan cheese",
             "notes": "Add chicken for extra protein",
-            "food_image_url": "https://example.com/images/caesar-salad.jpg",
+            "food_image_url": "https:https://imgs.search.brave.com/Vhu1GNoyUa9EgcoUauQbtY9MR_F9HxwGDHqlIN-nkwE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMx/ODcwNDQxMS9lcy9m/b3RvL2RpcmVjdGx5/LWFib3ZlLXNob3Qt/b2Ytc2FsYWQtaW4t/Ym93bC1vbi10YWJs/ZS1naXB1emtvYS1z/cGFpbi5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9ZFpqeVBB/XzZUS2ZQOFQxdExL/WmM3U1RtLUtTQXNP/NDJhT2FFclFVY1NQ/WT0",
             "price": "$8.99"
         }
     }

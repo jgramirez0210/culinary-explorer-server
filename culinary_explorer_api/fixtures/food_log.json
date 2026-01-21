@@ -88,6 +88,69 @@
             "category": [2],
             "uid": "user_bob_456"
         }
+    },
+    {
+        "model": "culinary_explorer_api.food_log",
+        "fields": {
+            "restaurant": 1,
+            "dish": 1,
+            "category": [1],
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.food_log",
+        "fields": {
+            "restaurant": 2,
+            "dish": 2,
+            "category": [2],
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.food_log",
+        "fields": {
+            "restaurant": 3,
+            "dish": 3,
+            "category": [1, 2],
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.food_log",
+        "fields": {
+            "restaurant": 4,
+            "dish": 4,
+            "category": [2],
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.food_log",
+        "fields": {
+            "restaurant": 5,
+            "dish": 5,
+            "category": [1],
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.food_log",
+        "fields": {
+            "restaurant": 6,
+            "dish": 6,
+            "category": [2],
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.food_log",
+        "fields": {
+            "restaurant": 7,
+            "dish": 7,
+            "category": [1, 3],
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
+        }
     }
 ]
   

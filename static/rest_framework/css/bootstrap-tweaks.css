@@ -235,3 +235,15 @@ body a:hover {
 .pagination {
   margin: 5px 0 10px 0;
 }
+
+/* Fix for text visibility in dark theme */
+form input:not([type=checkbox]), form textarea, form select {
+  color: white;
+  background-color: #333;
+  border-color: #555;
+}
+
+form input:not([type=checkbox]):focus, form textarea:focus, form select:focus {
+  color: white;
+  background-color: #444;
+}

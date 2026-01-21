@@ -1,8 +1,11 @@
+import logging
 from rest_framework.response import Response
 from rest_framework import serializers, status, viewsets
 from rest_framework.decorators import action
 from culinary_explorer_api.models import Food_Log, Restaurants, Dish, Categories
 from .serializers import RestaurantSerializer
+
+logger = logging.getLogger(__name__)
 
 
 class RestaurantView(viewsets.ModelViewSet):
@@ -24,11 +27,12 @@ class RestaurantView(viewsets.ModelViewSet):
             return Response({'message': str(ex)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
     def list(self, request):
         """Handle GET requests to get all restaurant entries
-        
+
         Returns:
             Response -- JSON serialized list of restaurants
         """
-        try: 
+        logger.debug("RestaurantView.list called")
+        try:
             restaurant = Restaurants.objects.all()
             if not restaurant.exists():
                 return Response({'message': 'Restaurants not found'})
@@ -39,12 +43,14 @@ class RestaurantView(viewsets.ModelViewSet):
 
     def create(self, request):
         """Handle POST requests to create a new restaurant
-        
+
         Returns:
-            Response -- JSON serialized 
+            Response -- JSON serialized
         """
         data = request.data.copy()
-        data['uid'] = request.user.id  # Assuming you want to use the ID of the currently authenticated user
+        if request.user.is_authenticated:
+            data['uid'] = request.user.id  # Use Django user ID if authenticated
+        # If not authenticated, use the uid from payload (assuming it's validated client-side)
         serializer = RestaurantSerializer(data=data)
         if serializer.is_valid():
             restaurant = serializer.save()

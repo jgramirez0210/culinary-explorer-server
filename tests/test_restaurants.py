@@ -2,14 +2,20 @@ from rest_framework import status
 from django.urls import reverse
 from rest_framework.test import APITestCase
 from culinary_explorer_api.models import Restaurants
+import logging
+
+logger = logging.getLogger(__name__)
 
 class TestRestaurants(APITestCase):
     fixtures = ['restaurants.json']
-    
+
     def setUp(self):
         """Data set up for restaurants tests"""
+        logger.info(f"Number of restaurants loaded: {Restaurants.objects.count()}")
+        logger.info(f"All restaurants: {list(Restaurants.objects.values())}")
         self.restaurants = Restaurants.objects.first()
-        self.detail_url = reverse('restaurants-detail', kwargs={'pk':self.restaurants.pk})
+        if self.restaurants:
+            self.detail_url = reverse('restaurants-detail', kwargs={'pk':self.restaurants.pk})
         self.list_url = reverse('restaurants-list')
         
     def test_single_restaurant(self):

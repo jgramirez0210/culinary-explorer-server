@@ -1,8 +1,11 @@
+import logging
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from culinary_explorer_api.models import Categories
-from .serializers import CategorySerializer  
+from .serializers import CategorySerializer
+
+logger = logging.getLogger(__name__)  
 
 class CategoriesView(ViewSet):
     """Culinary Explorer Categories View"""
@@ -24,10 +27,11 @@ class CategoriesView(ViewSet):
     
     def list(self, request):
         """Handle GET requests to get all categories
-        
+
         Returns:
             Response -- JSON serialized list of categories
         """
+        logger.debug("CategoriesView.list called")
         try:
             categories = Categories.objects.all()
             if not categories.exists():

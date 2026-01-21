@@ -6,22 +6,23 @@ from culinary_explorer_api.models import User
 class UserTests(TestCase):
     def setUp(self):
         """Data set up for the tests"""
-        self.user_data = User.objects.create(
+        self.user_data = User.objects.create_user(
+          uid = "2321skm3lsl3ms3sas3fdfmasd32sa",
           first_name = "John",
           last_name = "Doe",
-          email_address = "johnD@example.com",
+          email = "johnD@example.com",
           profile_image_url = "https://shorturl.at/iJM42",
-          uid = "2321skm3lsl3ms3sas3fdfmasd32sa" 
+          password = ""
         )
 
     def test_register_user(self):
         """Test user registration"""
-        url = "/register"
+        url = "/register_user"
 
         user_data = {
             "first_name": "Jane",
             "last_name": "Doe",
-            "email_address": "JaneD@example.com",
+            "email": "JaneD@example.com",
             "profile_image_url": "https://shorturl.at/iJM42",
             "uid": "sdwe24fr31qsddwqqe213124fqsd"
         }

@@ -1,56 +1,72 @@
 [
     {
         "model": "culinary_explorer_api.restaurants",
+        "id": 1,
         "fields": {
             "restaurant_name": "Franks Pizza",
             "restaurant_address": "417 Travis St. Houston, TX 77002",
             "website_url": "https://www.frankspizza.com/",
-            "uid": "rest_franks_001"
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
         }
     },
     {
         "model": "culinary_explorer_api.restaurants",
+        "id": 2,
         "fields": {
             "restaurant_name": "NUA Thai",
             "restaurant_address": "2020 Louisiana Street, Houston, TX 77002",
             "website_url": "https://www.nuathairestaurant.com/",
-            "uid": "rest_nua_002"
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
         }
     },
     {
         "model": "culinary_explorer_api.restaurants",
+        "id": 3,
         "fields": {
-            "restaurant_name": "Bella Italia",
-            "restaurant_address": "123 Main St, Anytown, USA",
-            "website_url": "https://bella-italia.com",
-            "uid": "rest_bella_003"
+            "restaurant_name": "Taco Mammacita",
+            "restaurant_address": "1234 6th Ave N, Nashville, TN 37208",
+            "website_url": "http://www.tacomamacitagermantown.com/",
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
         }
     },
     {
         "model": "culinary_explorer_api.restaurants",
+        "id": 4,
         "fields": {
-            "restaurant_name": "Sakura Sushi",
-            "restaurant_address": "456 Oak Ave, Somewhere, USA",
-            "website_url": "https://sakura-sushi.com",
-            "uid": "rest_sakura_004"
+            "restaurant_name": "McDougal's",
+            "restaurant_address": "901 12 Ave South Nashville, TN 37203",
+            "website_url": "https://www.mcdougalschicken.com/locations/12th-ave-south/",
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
         }
     },
     {
         "model": "culinary_explorer_api.restaurants",
+        "id": 9,
         "fields": {
-            "restaurant_name": "Taco Fiesta",
-            "restaurant_address": "789 Pine Rd, Elsewhere, USA",
-            "website_url": "https://taco-fiesta.com",
-            "uid": "rest_taco_005"
+            "restaurant_name": "Katz Deli",
+            "restaurant_address": "Katz's, Westheimer Road, Houston, TX, USA",
+            "website_url": "https://katzsneverkloses.com/",
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
         }
     },
     {
         "model": "culinary_explorer_api.restaurants",
+        "id": 11,
         "fields": {
-            "restaurant_name": "Golden Dragon",
-            "restaurant_address": "321 Elm St, Chinatown, USA",
-            "website_url": "https://golden-dragon.com",
-            "uid": "rest_dragon_006"
+            "restaurant_name": "Boltons Spicy Chicken & Fish",
+            "restaurant_address": "Bolton's Spicy Chicken & Fish, Main Street, Nashville, TN, USA",
+            "website_url": "https://www.boltonsfamous.com/",
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
+        }
+    },
+    {
+        "model": "culinary_explorer_api.restaurants",
+        "id": 14,
+        "fields": {
+            "restaurant_name": "Brenner's on the Bayou",
+            "restaurant_address": "1 Birdsall St, Houston, TX 77007-8022",
+            "website_url": "https://www.brennerssteakhouse.com/location/brenners-on-the-bayou/",
+            "uid": "GKQUVBeWvZVDDUjzv36JrqPhLqR2"
         }
     }
 ]

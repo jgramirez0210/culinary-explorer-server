@@ -9,7 +9,7 @@ class DishSerializer(serializers.ModelSerializer):
 class RestaurantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Restaurants
-        fields = ['id', 'restaurant_name', 'restaurant_address', 'website_url']        
+        fields = ['id', 'restaurant_name', 'restaurant_address', 'website_url', 'uid']        
         
 class CategorySerializer(serializers.ModelSerializer):
     """JSON Serializer for categories"""
@@ -22,7 +22,7 @@ class FoodLogSerializer(serializers.ModelSerializer):
     restaurant = RestaurantSerializer(read_only=True)
     dish = DishSerializer(read_only=True)
     category = CategorySerializer(many=True, read_only=True)
-    
+
     restaurant_id = serializers.PrimaryKeyRelatedField(queryset=Restaurants.objects.all(), source='restaurant', write_only=True)
     dish_id = serializers.PrimaryKeyRelatedField(queryset=Dish.objects.all(), source='dish', write_only=True)
     category_ids = serializers.PrimaryKeyRelatedField(queryset=Categories.objects.all(), source='category', many=True, write_only=True)
@@ -34,6 +34,7 @@ class FoodLogSerializer(serializers.ModelSerializer):
             'restaurant': {'required': False},
             'dish': {'required': False},
             'category': {'required': False},
+            'category_ids': {'required': False},
         }
     
     

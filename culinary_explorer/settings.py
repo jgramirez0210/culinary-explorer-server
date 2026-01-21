@@ -20,7 +20,7 @@ env.read_env(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = env("SECRET_KEY", default="your-secret-key")
 DEBUG = env.bool("DEBUG", default=True)
 ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["localhost", "127.0.0.1"])
-CORS_ORIGIN_WHITELIST = env.list("CORS_ORIGIN_WHITELIST", default=["http://localhost:3000", "http://127.0.0.1:3000"])
+CORS_ORIGIN_WHITELIST = env.list("CORS_ORIGIN_WHITELIST", default=["http://localhost:3000","http://localhost:3001","http://localhost:3002","http://localhost:3003", "http://127.0.0.1:3000"])
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -34,10 +34,12 @@ INSTALLED_APPS = [
     'culinary_explorer_api',
 ]
 
-CORS_ORIGIN_WHITELIST = (
+CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    'http://127.0.0.1:3000'
-)
+    'http://127.0.0.1:3000',
+    'http://localhost:3002',
+    'http://127.0.0.1:3002'
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -88,6 +90,9 @@ DATABASES = {
 }
 
 SECRET_KEY = 'your-secret-key'
+
+# Tell Django to use our custom User model
+AUTH_USER_MODEL = 'culinary_explorer_api.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
